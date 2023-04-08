@@ -1,0 +1,79 @@
+
+.caixa{
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.destaques__titulo{
+    background: rgba(0, 0, 0, .5);
+    color: #fdfdfd;
+    padding: .6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.destaques{
+    display: grid;
+    grid-gap: .2rem; /* espaçamento do grid */
+    grid-template-columns: 25% 25% 25% 25%; /* para ter quatro colunas */
+    grid-template-rows: 33.33% 33.33% 33.33%; /* para ter três linhas */
+    height: calc(100vh - 50px);
+}
+
+.destaques__principal{
+    background: url(../img/fortnite.jpg) center / cover no-repeat;
+    /*grid-column-start: 1; qual coluna começa 
+    grid-column-end: 4; qual coluna termina (tem que ter uma columa a mais)*/
+    grid-row-start: 1;/* qual linha começa */
+    grid-row-end: 3;/* qual linha termina (tem que ter uma linha a mais)*/
+
+}
+
+.destaques__secundario:nth-child(2){
+    background: url(../img/pubg.jpg) center / cover no-repeat;
+    /*grid-column: 4/4; forma cruta de escrever colunas */
+    /*grid-row: 1/1;  forma cruta de escrever linhas*/
+}
+
+.destaques__secundario:nth-child(3){
+    background: url(../img/slack.png) center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(3){
+    background: url(../img/slack.png) center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(4){
+    background: url(../img/whatsapp.png) center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(5){
+    background: url(../img/cs-go.jpg) center / cover no-repeat;
+}
+
+.destaques__categorias{
+    grid-column: 1/3; 
+    grid-row: 3/3; 
+}
+
+.destaques__categorias___lista{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+    
+.destaques__categorias___item{
+    align-items: center;
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333333;
+    display: flex;
+    padding: 1rem;
+    width: 50%;
+}
+
+.destaques__categorias___link{
+    color: inherit; /* inherit herda o que tem na classe mãe */
+} 
